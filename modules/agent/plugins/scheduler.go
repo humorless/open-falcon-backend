@@ -191,5 +191,5 @@ func PluginRun(plugin *Plugin) {
 		metrics[j].Timestamp = now
 	}
 
-	g.SendToTransfer(metrics)
+	g.SendToMQ(metrics)
 }

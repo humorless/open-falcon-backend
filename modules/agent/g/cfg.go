@@ -11,6 +11,13 @@ import (
 	"github.com/toolkits/file"
 )
 
+type MqConfig struct {
+	User      string `json:user`
+	Pass      string `json:pass`
+	Addr      string `json:addr`
+	QueueName string `json:queuename`
+}
+
 type PluginConfig struct {
 	Enabled bool   `json:"enabled"`
 	Dir     string `json:"dir"`
@@ -52,6 +59,7 @@ type GlobalConfig struct {
 	Http          *HttpConfig      `json:"http"`
 	Collector     *CollectorConfig `json:"collector"`
 	IgnoreMetrics map[string]bool  `json:"ignore"`
+	Mq            MqConfig         `json:"mq"`
 }
 
 var (

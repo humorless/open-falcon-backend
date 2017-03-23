@@ -22,7 +22,7 @@ func configPushRoutes() {
 			return
 		}
 
-		g.SendToTransfer(metrics)
+		g.SendToMQ(metrics)
 		w.Write([]byte("success"))
 	})
 }

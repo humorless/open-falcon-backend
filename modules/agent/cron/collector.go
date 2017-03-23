@@ -69,7 +69,7 @@ func collect(sec int64, fns []func() []*model.MetricValue) {
 			mvs[j].Timestamp = now
 		}
 
-		g.SendToTransfer(mvs)
+		g.SendToMQ(mvs)
 
 	}
 }

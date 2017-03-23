@@ -48,5 +48,11 @@
         "mem.swaptotal": true,
         "mem.swapused": true,
         "mem.swapfree": true
+    },
+    "mq": {
+      "queuename": "data",
+      "user": "mq",
+      "pass": "password",
+      "addr": "10.20.30.40:5672"
     }
 }
